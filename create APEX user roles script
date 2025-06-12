@@ -1,0 +1,21 @@
+BEGIN
+    APEX_UTIL.CREATE_USER(
+        p_user_name => 'CUSTOMER1',
+        p_email_address => 'john.doe@example.com',
+        p_web_password => 'Password123',
+        p_developer_privs => NULL
+    );
+    APEX_UTIL.CREATE_USER(
+        p_user_name => 'AGENT1',
+        p_email_address => 'smith@support.com',
+        p_web_password => 'Password123',
+        p_developer_privs => NULL
+    );
+    APEX_UTIL.CREATE_USER(
+        p_user_name => 'ADMIN1',
+        p_email_address => 'admin@support.com',
+        p_web_password => 'Password123',
+        p_developer_privs => 'ADMIN'
+    );
+END;
+/
